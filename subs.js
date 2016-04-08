@@ -7,28 +7,29 @@ var multiline = function(f) {
 // text from http://transcripts.foreverdreaming.org/viewtopic.php?f=159&t=22987
 var subtitles = prompt("Subtitles (get from view source of URL for episode)", "http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200");
 var subtitles = multiline(function(){/* 
-<p>(through static): I didn't understand your e-mail.</p>
-<p>Uh, can you repeat that? You're breaking up.</p>
-<p>I didn't understand your e-mail.</p>
-<p>Ah. Yeah, I had to get a little creative because the S, R and M keys on my laptop stopped working.</p>
-<p>&quot;Deaw Aby, could you pleathe dwive be to the twain thtow thubtibe tobowow?&quot;</p>
-<p>So, is that a yes?</p>
-<p>Sheldon, why don't you get a new computer?</p>
-<p>You know that one's out-of-date.</p>
-<p>Oh, but I like this computer.</p>
-<p>The video is failing, and the sound is cutting out.</p>
-<p>I'm sorry, I didn't get that.</p>
-<p>(through static): The video is failing, and the sound is cutting out.</p>
-<p>I'm sorry, one more time. The sound is cutting out.</p>
-<p>I can't read that!</p>
-<p>The video is failing!</p>
-<p>(through static): Get a new computer.</p>
-<p>What?</p>
-<p>(through static): Get a new computer.</p>
-<p>What?!</p>
-<p>(phone rings)</p>
-<p>Hello?</p>
-<p>Get a new computer!</p>
+<p>(birds singing, insects trilling)</p>
+<p><strong>Sheldon</strong>: It's nice to get back to nature.</p>
+<p>Why don't I do this more often?</p>
+<p>What a beautiful forest.</p>
+<p>(gasps delightedly)</p>
+<p>Hello, little butterfly.</p>
+<p>What's your Na...</p>
+<p>(screams)</p>
+<p>Whatcha doing?</p>
+<p>I was enjoying some virtual reality, until you ruined it with your actual face.</p>
+<p>What am I smelling?</p>
+<p>Oh, it's car air freshener.</p>
+<p>I was simulating the smell of the forest.</p>
+<p>That's not what the forest smells like.</p>
+<p>Well, how would I know?</p>
+<p>Why are you pretending to be outdoors?</p>
+<p>You hate it.</p>
+<p>Hmm? Oh.</p>
+<p>Amy showed me a compelling study that demonstrated the cognitive benefit of spending time in the wilderness.</p>
+<p>Buddy, I am ready to drive you into the wilderness any time you want and leave you there.</p>
+<p>Well, make your jokes, but some of the participants who spent four days in the woods away from all technology reported a 50% gain in reasoning skills upon their return.</p>
+<p>Okay, if that's true, why aren't there more genius squirrels?</p>
+<p>You may need this more than I do.</p>
 <p>♪ Our whole universe was in a hot, dense state ♪<br />
 ♪ Then nearly 14 billion years ago expansion started... Wait! ♪<br />
 ♪ The Earth began to cool ♪<br />
@@ -37,340 +38,345 @@ var subtitles = multiline(function(){/*
 ♪ <em>We built the pyramids</em> ♪<br />
 ♪ Math, Science, History, unraveling the mystery ♪<br />
 ♪ That all started with a big bang ♪<br />
-♪ <em>Bang!</em> ♪</p>
-<p>♪ The Big Bang Theory 9x19 ♪<br />
-The Solder Excursion Diversion<br />
-Original Air Date on March 31, 2016</p>
-<p>This is cool.</p>
-<p>When was the last time you and I built something together?</p>
-<p>Scientifically? A little over a year ago.</p>
-<p>LEGOs? Last week in my room.</p>
-<p>If there was a Nobrize for Millennium Falcons that fall apart when you pick them up, we'd be set.</p>
-<p>Hey, guys!</p>
-<p><strong>Both</strong>: Hey.</p>
-<p>What are you doing here?</p>
-<p>We heard there were some sexy scientists working hard all weekend.</p>
-<p>Yeah, so we brought you some lunch and we are gonna go look for 'em.</p>
-<p>Soup, sandwiches and emasculation, just like my mom used to make.</p>
-<p>So, how's it goin'?</p>
-<p>Good. Slow.</p>
-<p>There's a lot of tedious setup, but once we get through that it should go quicker.</p>
-<p>Is there anything we can do to help?</p>
-<p>You know what, this part isn't that technical.</p>
-<p>You actually could.</p>
-<p>Wow, really? Called my bluff. All righty then.</p>
-<p>Can we really help?</p>
-<p>While we finish soldering these boards, it'd be great if you guys could wrap these pipe fittings with Teflon tape.</p>
-<p>I'll show you how to do one.</p>
-<p>Hey, w-wouldn't it be funny if after all your years of hard work, I'm the one who makes a scientific breakthrough?</p>
-<p>He doesn't think that's funny.</p>
-<p>(static crackling)</p>
-<p>(gasps)</p>
-<p>(sighs)</p>
-<p>(knocking)</p>
-<p>I got here as quickly as I could.</p>
-<p>You're too late.</p>
-<p>(&quot;Taps&quot; playing)</p>
-<p>Sheldon, this is silly.</p>
-<p>You got emotional when that lab monkey died.</p>
-<p>That lab monkey told me he loved me in sign language.</p>
-<p>♪ ♪</p>
-<p>(&quot;Taps&quot; ends)</p>
-<p>Great.</p>
-<p>Now I'm gonna have that song in my head all day.</p>
-<p>Look, I'm-I'm sorry for your loss, but I think I have something that might make you feel better.</p>
-<p>I got you a new computer!</p>
-<p>How could you do that?</p>
-<p>Do what?</p>
-<p>Choosing a new laptop is an incredibly personal ritual.</p>
-<p>You have taken away weeks of agonizing thought, tedious research, sleepless nights filled with indecision. I j...</p>
-<p>Haven't I lost enough today?</p>
-<p>Well, the guy at the store said this one is great.</p>
-<p>Oh! Oh, the guy!</p>
-<p>Oh, pardon me.</p>
-<p>I-I didn't realize you'd spoken to the guy.</p>
-<p>Yeah, tell me, did the guy choose one with a 4K display and a Thunderbolt port?</p>
-<p>Yes.</p>
-<p>Yeah?</p>
-<p>D-Did the guy make sure that this has a one-terabyte solid-state drive?</p>
-<p>Yes.</p>
-<p>Yeah? Oh, well, was this guy Rick from Computer Solutions on Colorado?</p>
-<p>Yes.</p>
-<p>Yeah, well, he does know his stuff.</p>
-<p>After you wrap the body in reflective tape, the ends get Teflon tape so we can get a tight seal.</p>
-<p>Like this? Oh.</p>
-<p>Yeah, perfect.</p>
-<p>And it helps to have small, delicate fingers.</p>
-<p>So don't be discouraged if you can't do it as fast as me and Howard. (chuckles)</p>
-<p>I don't know if we have enough solder to finish these circuit boards.</p>
-<p>We had a full spool yesterday.</p>
-<p>What can I say, I play hard, I solder even harder.</p>
-<p>Sometimes he solders at home with his shirt off.</p>
-<p>It's like a beer commercial.</p>
-<p>(blows, clicks tongue)</p>
-<p>Well, we got to make a run to the hardware store.</p>
-<p>How can you call yourself a scientist and run out of solder?</p>
-<p>Well, funny story. So, we have plenty of the 60/40 tin-to-lead ratio solder, but the spools look a lot like the 63/37 tin-to...</p>
-<p>Honey, honey, honey, let me stop you. That is-is not a funny story.</p>
-<p>You want to come with us?</p>
-<p>I'm kind of getting into the groove here.</p>
-<p>Yeah, you guys run to the store and let the women handle the science for a change.</p>
-<p><strong>Leonard</strong>: Okay.</p>
-<p>We'll be back as soon as we can.</p>
-<p>(clears throat) Okay, so what... is solder?</p>
-<p>I suppose I should set this up.</p>
-<p>Or would you like to rob me of that, too?</p>
-<p>Knock it off or I'll start making W-H sounds for words that just have a W.</p>
-<p>You wouldn't.</p>
-<p>&quot;Hwatch&quot; me.</p>
-<p>Fine. I'm sorry.</p>
-<p>Thank you for the thoughtful gift.</p>
-<p>I really do appreciate it.</p>
-<p>As you know, I had become attached to my old laptop.</p>
-<p>But I'm sure, in time, that this one will...</p>
-<p>(gasps) Jeepers creepers, that started up fast!</p>
-<p>I thought you might like it.</p>
-<p>Look at the 4K resolution.</p>
-<p>Next time we Skype, I'm gonna count all those nostril hairs.</p>
-<p>Or you could just look into my eyes.</p>
-<p>But you only have two eyes.</p>
-<p>You got a lot of nostril hairs.</p>
-<p>Well, you know, as long as you're happy.</p>
-<p>Oh.</p>
-<p>I am. (chuckles)</p>
-<p>And Rick said you could bring in your old one to recycle it.</p>
-<p>Oh. Uh, no, no, no, thank you.</p>
-<p>Oh, but he said you can get store credit.</p>
-<p>Well, no, I just... I-I don't want to recycle it.</p>
-<p>And I don't want store credit.</p>
-<p>But why wouldn't...</p>
-<p>Can we please change the subject?</p>
-<p>O-Okay.</p>
-<p>How 'bout we change it to why you're being weird about this?</p>
-<p>I'm not being weird.</p>
-<p>I...</p>
-<p>It's hard to explain.</p>
-<p>Sheldon, just tell me.</p>
-<p>It might be easier to show you.</p>
-<p>Okay.</p>
-<p>We'd have to take your car.</p>
-<p>All right.</p>
-<p>And I'm gonna need you to sign a nondisclosure agreement.</p>
-<p>Well, I signed one before we slept together.</p>
-<p>Why not now?</p>
-<p>Penny says they're having fun working on the prototype.</p>
-<p>Remember when her fun was nightclubs and drinking games?</p>
-<p>I know. I'm lowering the bar so slowly.</p>
-<p>This time next year she'll have a coin collection.</p>
-<p>Excuse me.</p>
-<p>You guys interested in a free screening of an upcoming movie?</p>
-<p>Oh. Sorry, we can't.</p>
-<p>Well, hang on. What movie is it?</p>
-<p>Oh, I can't tell you. But it does star Will Smith.</p>
-<p>Wait.</p>
-<p>I bet it's <em>Suicide Squad.</em></p>
-<p>Let's check it out.</p>
-<p>What about the girls?</p>
-<p>Penny just said they're having fun.</p>
-<p>Honestly, you want to wrap tape around a bunch of pipe fittings all afternoon?</p>
-<p>Okay, we'll take 'em.</p>
-<p>Okay. But, I swear, if it's Will Smith in <em>Shark Tale 2,</em> it better be at least as good as the original.</p>
-<p>I mean, it's crazy, isn't it?</p>
-<p>I moved here from Nebraska to be an actress, and now I'm sitting in an engineering lab at Caltech helping to build a prototype for a high-tech guidance system.</p>
-<p>It is crazy. It's also crazy that I've made 14 of these and you've made three.</p>
-<p>(knocking)</p>
-<p>Hey. Where are the guys?</p>
-<p>Oh, they went to the store to get solder, which is metal you melt to make science things.</p>
-<p>Since when do you work on weekends?</p>
-<p>I'm an astrophysicist.</p>
-<p>The stars don't take a day off.</p>
-<p>You were home alone and had no one to play with?</p>
-<p>Well, the cleaning lady was there, but she doesn't like me.</p>
-<p>You need any help?</p>
-<p>Not with Lightning McQueen here.</p>
-<p>I think we're good.</p>
-<p>Okay. That's cool.</p>
-<p>I guess everybody's involved in this project but me.</p>
-<p>So... see ya.</p>
-<p>(door shuts)</p>
-<p>I feel bad.</p>
-<p>Should we have asked him to stay?</p>
-<p><strong>Koothrappali (high-pitched)</strong>: Yes.</p>
-<p>Will you please tell me where we're going?</p>
-<p>Sorry, you're on a need-to-know basis.</p>
-<p>I'm driving the car. I need to know.</p>
-<p>Right.</p>
-<p>So where are we going?</p>
-<p>No, I meant turn right, and you missed it.</p>
-<p>Maybe you do need to know.</p>
-<p>(indistinct chatter)</p>
-<p>What are we gonna tell the girls?</p>
-<p>It's not a problem.</p>
-<p>I mean without lying.</p>
-<p>And now you've made it a problem.</p>
-<p>Come on. We're a couple of smart guys.</p>
-<p>I'm sure we can come up with a way to explain this that doesn't make us look bad.</p>
-<p>(phone chimes)</p>
+♪ <em>Bang!</em> ♪<br />
+♪ The Big Bang Theory 9x20 ♪<br />
+The Big Bear Precipitation<br />
+Original Air Date on April 7, 2016</p>
+<p>Here's your tea.</p>
 <p>Oh!</p>
-<p>The boys had to drive all the way to San Bernardino for the solder and got a flat.</p>
-<p>(phone chimes)</p>
-<p>They bought it.</p>
-<p>But we're gonna have to put the spare on before we go back.</p>
-<p>Oh, you're good at this.</p>
-<p>Well, I lie a lot.</p>
-<p><strong>Man</strong>: Hey, guys, thank you for being a part of our test screening. You're about to be one of the first audiences to see <em>Suicide Squad.</em></p>
-<p>(applause and cheering)</p>
-<p>Hey!</p>
-<p>(laughs) You were right.</p>
-<p>Oh, I keep telling you-- good things happen to bad people.</p>
-<p>Uh, we're gonna get started in a couple minutes. Enjoy.</p>
-<p>Who are you texting?</p>
-<p>Raj. He really wants to see this movie.</p>
-<p>Oh, he'll never make it in time.</p>
-<p>I know. I want to make him feel bad.</p>
-<p>&quot;Ha, ha. Leonard and I are about to see <em>Suicide Squad.</em></p>
-<p>Spoiler alert: when I see you I'm gonna spoil it.&quot;</p>
-<p>You're a good friend.</p>
-<p>(chuckles)</p>
-<p>(phone chimes)</p>
-<p>Okay. (clears throat)</p>
-<p>Would you ladies please leave the room for a moment?</p>
-<p>Why?</p>
-<p>I need to rub my genitals on their prototype.</p>
-<p>What's going on?</p>
-<p>Leonard and Howard don't have a flat.</p>
-<p>They went to the movies. Look.</p>
-<p>Son of a bitch. Un-freakin' believable.</p>
-<p>Oh. You know what? I'm gonna let them know that I'm here with you and that they're busted.</p>
-<p>No. You know what? Don't. Don't.</p>
-<p>Let's let them think they're getting away with it.</p>
-<p>Yeah, let's see how deep a hole they can dig for themselves.</p>
-<p>Mm-hmm. Interesting.</p>
-<p>I mean, it's not testicles on a cryostat, but I like it.</p>
-<p>Why do you have a storage unit?</p>
-<p>Just wait.</p>
-<p>How long have you had it?</p>
-<p>Just wait.</p>
-<p>Do you want me to hold that computer?</p>
-<p>Just wai... You know what? Actually, yes, thank you.</p>
-<p>Welcome to my Fortress of Shame.</p>
-<p>I'm sorry.</p>
-<p>What-what am I looking at?</p>
-<p>It's basically everything I've ever owned.</p>
-<p>Um, every book, every T-shirt, every piece of broken electronics.</p>
-<p>Just... all of it.</p>
-<p>All of it?</p>
-<p>I have a Ziploc bag filled with all my old Ziploc bags.</p>
-<p>Okay.</p>
-<p>Well...</p>
-<p>I would like to tell you that there is nothing here to be ashamed of.</p>
-<p>So I'm gonna need a minute.</p>
-<p>All right, how are we gonna play this when they return?</p>
-<p>I know.</p>
-<p>You guys should totally be making out with me.</p>
-<p>Sweetie, I know you think jokes like that are funny, but do you really think you could handle making out with both of us?</p>
-<p>No, ma'am.</p>
-<p>Okay. Okay, how about this?</p>
-<p>They don't know you're here with us, so you hide in the closet. When they show up, we'll hear whatever their dumb story is about where they were, we'll pretend to believe them, and just when they think they got away with it, you jump out.</p>
-<p>Yeah, that's pretty good. I love it!</p>
-<p>I'll be all like, &quot;Busted!&quot;</p>
-<p>And they'll be like, &quot;What?!&quot;</p>
-<p>And then we'll all be like, &quot;Oh, <em>yeah!&quot;</em></p>
-<p>Yeah, I-I get it.</p>
-<p>I wouldn't make out with me, either.</p>
-<p>In here is every clock radio I've ever owned.</p>
-<p>Calculators, VHS tapes.</p>
-<p>Yeah. Oh.</p>
-<p>Sporting equipment.</p>
-<p>Y-You have sporting equipment?</p>
-<p>Well, oh, it's just a... it's a... a golf ball that my brother threw at my head.</p>
-<p>You can still feel the dent.</p>
-<p>It's right next to the hockey puck dent.</p>
-<p>Okay, why do you have a bin of pinecones?</p>
-<p>I used to collect them as a child.</p>
-<p>The spiral of scales open in the Fibonacci sequence.</p>
-<p>A fact that, when you tell your brother, gets a golf ball thrown at your head.</p>
-<p>So, why do you feel you need to save these things?</p>
-<p>I'd like to say it's nostalgia, but every time I think of throwing anything away, my ears start to ring, and I get butterflies in my stomach.</p>
-<p>And then it feels like the butterflies get eaten by rats, and then, the-the rats get eaten by...</p>
-<p>Okay.</p>
-<p>I get it. I get it.</p>
-<p>It ends with dinosaurs.</p>
-<p>I'm sorry if you think less of me.</p>
-<p>I don't.</p>
+<p>Do not sneak up on a guy when he's sitting on a log.</p>
+<p>You know, if you really want to be in nature, why don't we rent a cabin?</p>
+<p>Look, I'm sorry, when did you even get here? I...</p>
+<p>You know, there's a cabin in Big Bear that a doctor I work with keeps offering me.</p>
+<p>Because he's hitting on you?</p>
+<p>She.</p>
+<p>Oh, good.</p>
+<p>But I could get her.</p>
+<p>We could all go for the weekend.</p>
+<p>It'll be fun.</p>
+<p>Yeah... (clears throat) Excuse me.</p>
+<p>Here, look up &quot;fun,&quot; get back to me.</p>
+<p>You and I could still go and have a nice weekend.</p>
+<p>Sure.</p>
+<p>Come on, Sheldon, let's go with them.</p>
+<p>I hardly think so.</p>
+<p>You be sure and say hello to all the mosquitoes, bees, bears, snakes, possums, poison oak, oh, and last, but not least, teenagers with guitars.</p>
+<p>I'll see if it's available.</p>
+<p>You know, if that study's real, Leonard might come back smarter than you.</p>
+<p>Are you trying to manipulate me?</p>
+<p>Yes.</p>
+<p>Well done, it worked, we're going.</p>
+<p>Yay!</p>
+<p>(bags rustling)</p>
+<p><strong>Bernadette</strong>: Come on, Raj, give me a bag.</p>
+<p>No, no, you're pregnant.</p>
+<p>The only thing you carry is our hope for a better tomorrow.</p>
+<p>Hey, where you been?</p>
+<p>Uh, Raj took me to the baby doctor and then we swung by the grocery store.</p>
+<p>(tires screeching on game)</p>
+<p>Did you get graham crackers?</p>
+<p>I mean, are... what... is the baby okay?</p>
+<p>Yes and yes.</p>
+<p>(sighs)</p>
+<p>I didn't know you needed help running errands today.</p>
+<p>I didn't, but Raj volunteered.</p>
 <p>Really?</p>
-<p>'Cause every time I come in here, I think less of me.</p>
-<p>Why?</p>
-<p>Because I'm a fraud.</p>
-<p>No. I purport to be a man of the mind.</p>
-<p>I've been such a-a vocal champion of The Singularity, but how can I leave my body behind and become one with the Internet when I've never even thrown a toothbrush away?</p>
-<p>It's okay, Sheldon.</p>
-<p>You know, I... I've saved a lot of weird things, too.</p>
-<p>Like what?</p>
-<p>Well, um, did you know I have a microscope slide with a little bit of tissue from the first brain I ever dissected?</p>
-<p>I have an old teddy bear I secretly wiped my nose on for years.</p>
-<p>It's not a contest.</p>
-<p>Okay, here they come. Go hide.</p>
-<p>Oh, man, when I come out of the closet, I'm gonna nail those guys!</p>
-<p>Yeah, I heard it. Shut up.</p>
-<p>Hey.</p>
-<p>Hi.</p>
-<p>Hey, what's this?</p>
-<p>Listen, we did a stupid thing.</p>
-<p>We went to a movie and lied about it, but we feel bad and want to make it up to you.</p>
-<p>So, these are for you, and if you're not too mad, we'd love to take you guys to dinner.</p>
-<p><strong>Wolowitz</strong>: Yeah.</p>
-<p>Anywhere you want.</p>
-<p>Oh. Well, thank you for being honest.</p>
-<p><strong>Penny</strong>: Yeah. You know, I want to be upset, but we did kind of have fun working on the prototype.</p>
-<p><strong>Koothrappali</strong>: Don't forgive them! Stay mad at them!</p>
-<p>What is he doing in there?</p>
-<p>Busting you!</p>
-<p>It's okay. They apologized.</p>
-<p>Yeah, it's fine.</p>
-<p>Well this is kind of anti-climactic.</p>
-<p>You know what wasn't anti-climactic?</p>
-<p>The end of the movie. Get this.</p>
-<p>No spoilers! No spoilers!</p>
-<p>And he's back in the closet.</p>
-<p>Ready for dinner?</p>
+<p>Yeah, ever since you told him I was pregnant, he's really been making a fuss over me.</p>
+<p>Oh. Well, I guess that's kind of sweet.</p>
+<p>Bernie, I just forwarded you a list of the top five lactation consultants in Los Angeles.</p>
+<p>I know my favorite, but I'd love to hear what you think.</p>
+<p>And it just got weird.</p>
+<p>Hey. Amy's downstairs.</p>
+<p>Okay, one sec.</p>
+<p>Uh, what-what you got goin' on here?</p>
+<p>I bought a baseball cap.</p>
+<p>I can see that.</p>
+<p>What team did you get?</p>
+<p>Uh, Hufflepuff, from <em>Harry Potter.</em></p>
+<p>Well, we'll be in the woods.</p>
+<p>I'm ready to go.</p>
+<p>Anything you'd like to say to <em>him?</em></p>
+<p>Nice hat, Sheldon.</p>
+<p>Thanks.</p>
+<p>Why are you so mean to me?</p>
+<p>(woman screaming in pain)</p>
+<p>(screaming continues)</p>
+<p>What the hell are you watching?</p>
+<p>Raj found all these childbirth videos online.</p>
+<p>This one is of a woman giving birth in a river.</p>
+<p>Okay, that is the least Jewish thing I've ever seen in my life.</p>
+<p>You feel like Raj is getting a little carried away with all the baby stuff?</p>
+<p>I don't think so.</p>
+<p>He just wants to be part of the experience.</p>
+<p>All right, if you say so.</p>
+<p>What's in the box?</p>
+<p>Oh, it's an ultrasonic microphone so we can hear the baby's heartbeat.</p>
+<p>Oh.</p>
+<p>That's cool.</p>
+<p>Can we try it?</p>
+<p>Actually, Raj ordered it.</p>
+<p>He made me promise to wait till he was here.</p>
+<p>So he can be... part of the experience?</p>
 <p>Yeah.</p>
-<p>Should we invite Raj?</p>
-<p><strong>Koothrappali (high-pitched)</strong>: Yes.</p>
-<p>So, no one else knows about this?</p>
-<p>Only you.</p>
-<p>Thank you for trusting me.</p>
-<p>What good is having a girlfriend if you can't unload your psychological sewage on her?</p>
-<p>That's me, your emotional outhouse.</p>
-<p>You know, if you ever decide you want to do something about this, I'm-I'm here for you.</p>
-<p>Thank you.</p>
-<p>I wouldn't even know how to begin.</p>
-<p>Baby steps, I guess.</p>
-<p>Mm.</p>
-<p>I suppose I could try getting rid of the golf ball.</p>
-<p>Oh. Okay.</p>
-<p>I will always have the dent to remember it by.</p>
-<p>(sighs heavily)</p>
-<p>You did it.</p>
-<p>Do you feel okay?</p>
-<p>Actually, yes.</p>
-<p>I do.</p>
-<p>Well, I'm proud of you.</p>
-<p>Oh. Thanks.</p>
-<p>I'm glad I told you about the storage unit.</p>
-<p>Well, I feel closer to you now.</p>
-<p>Oh, I feel closer to you, too.</p>
-<p>You know, it's still a couple of hours until my bedtime.</p>
-<p>What did you have in mind?</p>
-<p>You look amazing.</p>
-<p>I mean, this resolution is remarkable.</p>
-<p>I really had to go home for this?</p>
-<p>Yes, but it's like you're right here in the room.</p>
-<p>And yet, I'm not.</p>
-<p>But I feel like I could reach out and touch you.</p>
-<p>And yet, you can't.</p>
-<p>I know!</p>
-<p>Please kiss Yuwen now...</p>
+<p>I'm surprised he let us conceive without him.</p>
+<p>It's a sore spot-- don't bring it up.</p>
+<p>It's so cute and rustic up here.</p>
+<p>I know.</p>
+<p>Did you see they still have a video rental place? it's like Colonial Williamsburg.</p>
+<p>Well... cell service is down to one bar, so if anyone needs medical attention or to tell a stranger their political views are stupid, now's the time.</p>
+<p>Have you ever been off the grid before?</p>
+<p>Once.</p>
+<p>The battery ran out on my phone.</p>
+<p>I had to wait for my iPad to turn on.</p>
+<p>I was afraid he was gonna eat me.</p>
+<p>Raj just pulled up.</p>
+<p>I'm gonna say something to him.</p>
+<p>Leave it alone. He means well.</p>
+<p>So you don't think he needs to rein it in a little?</p>
+<p>No, not really.</p>
+<p>And you're not concerned he's acting like somehow this is his kid, too?</p>
+<p>He's just trying to be supportive.</p>
+<p>Just supportive.</p>
+<p>Not over-the-top in any way?</p>
+<p>No.</p>
+<p><strong>Koothrappali</strong>: Hello!</p>
+<p>You saw him carrying that.</p>
+<p>Astronauts saw him carrying that.</p>
+<p>(gasps)</p>
+<p>This place is great!</p>
+<p>So nice of that doctor to just let you use it.</p>
+<p>Well, she is taking me to an Indigo Girls concert, so hold that thought.</p>
+<p>Okay.</p>
+<p>Well, should we check each other for ticks?</p>
+<p>Sheldon, all we did was walk in from the car.</p>
+<p>Oh. Well, suit yourself.</p>
+<p>Who wants to check me?</p>
+<p>On the other hand, safety first.</p>
+<p>(rain falling loudly)</p>
+<p>Wow, it's really coming down.</p>
+<p>This sucks.</p>
+<p>And there goes our hike.</p>
+<p>Oh, not our hike!</p>
+<p>Now we have to stay safe and warm.</p>
+<p>You know, we could still go.</p>
+<p>A little rain isn't gonna kill us.</p>
+<p>Have you been outside in the rain with Sheldon?</p>
+<p>No.</p>
+<p>You'll wish it would kill you.</p>
+<p>So what do we do now?</p>
+<p>They have some board games.</p>
+<p>Eh, most of the Jenga pieces are missing and the Scrabble only has seven tiles, so unless you want to build an unimpressive structure with the word &quot;SHNERPF&quot; next to it, move on.</p>
+<p>Hey, let's light a fire.</p>
+<p>Ooh, that sounds cozy.</p>
+<p>I don't think I've lit a real fire before.</p>
+<p>Ah, it's basic thermodynamics.</p>
+<p>I'm sure we can figure that out.</p>
+<p>I could stack the logs conically to facilitate airflow.</p>
+<p>That would maximize oxygen for optimal combustion.</p>
+<p>(fire whooshes)</p>
+<p>Right. So all we need is to...</p>
+<p>Got it.</p>
+<p>A scientist made that.</p>
+<p>Look, Raj, you're my best friend in the world and I really appreciate your enthusiasm about the baby.</p>
+<p>Please, my pleasure.</p>
+<p>And, of course, Howie and I both want you to be a part of all this.</p>
+<p>But we have to set some boundaries.</p>
+<p>I don't understand.</p>
+<p>The three of us aren't having this baby.</p>
+<p>Just the two of us.</p>
+<p>Oh...</p>
+<p>Okay. Yeah, I get it.</p>
+<p>I'll back off.</p>
+<p>Thanks for understanding.</p>
+<p>Of course.</p>
+<p>I'll give you guys some space.</p>
+<p>Let me just get this out of your way.</p>
+<p>You need some help?</p>
+<p>No, I got it.</p>
+<p>(clattering)</p>
+<p>(grunts)</p>
+<p>Raj... Raj, wait.</p>
+<p>Please, Bernadette.</p>
+<p>Let me leave with my dignity.</p>
+<p>(thumps)</p>
+<p>Hey, you guys want to play a drinking game?</p>
+<p>Oh, well now, well now, we'll never win.</p>
+<p>You always play the drinking game.</p>
+<p>Not <em>the</em> drinking game, <em>a</em> drinking game.</p>
+<p>To be fair, good at both.</p>
+<p>What's the game?</p>
+<p>All right, it's called Never Have I Ever.</p>
+<p>The rules are simple.</p>
+<p>Someone says something they've never done, but if you have done it, you take a drink.</p>
+<p>I've never played that before.</p>
+<p>(stammers) Hey, now, wait.</p>
+<p>Have we started?</p>
+<p>Do I drink?</p>
+<p>What is happening?</p>
+<p>Okay.</p>
+<p>Calm down.</p>
+<p>I'll go first.</p>
+<p>All right, let's see.</p>
+<p>Never have I ever...</p>
+<p>She's trying to think of something she's never done before.</p>
+<p>This could take a while.</p>
+<p>Very funny.</p>
+<p>Okay, never have I ever...</p>
+<p>Yeah, you know what?</p>
+<p>Let's just circle back.</p>
+<p>Okay, I'll go.</p>
+<p>Never have I ever been arrested.</p>
+<p>So I drink.</p>
+<p>No, it's only if you've done it.</p>
+<p>Got it.</p>
+<p>I can't believe you've been arrested.</p>
+<p>I can't believe Penny hasn't.</p>
+<p>Sheldon, what did you do?</p>
+<p>Well, I'm not proud of it, but... I jaywalked.</p>
+<p>Oh, no, it's like a horror movie.</p>
+<p>We're trapped in a cabin with a maniac.</p>
+<p>I'm surprised you would do that.</p>
+<p>No, I crossed in the middle of the street.</p>
+<p>And normally, I wouldn't, but I saw an aggressive-looking Girl Scout, and it was the heart of cookie season.</p>
+<p>Anyway, there was a police officer, and he witnessed the whole thing.</p>
+<p>What-- he arrested you for that?</p>
+<p>(stammers) No, he didn't do anything.</p>
+<p>So I said, &quot;You just saw me jaywalk. Why aren't you doing your job?&quot;</p>
+<p>You know?</p>
+<p>&quot;M-Maybe I should arrest you for-for impersonating a police officer.&quot;</p>
+<p>And then you got arrested.</p>
+<p>Oh, and how.</p>
+<p>I feel like I just made a horrible mistake.</p>
+<p>Yeah.</p>
+<p>But on the other hand, I didn't kick him out of our lives.</p>
+<p>I just asked him to back off a little.</p>
+<p>Yeah.</p>
+<p>What? Are you gonna cry?</p>
+<p>(crying): Yeah!</p>
+<p>Is it baby hormones or actually sad?</p>
+<p>I can't tell anymore!</p>
+<p>I'll go get him.</p>
+<p>And bring back the bear!</p>
+<p>This game's dangerous.</p>
+<p>I could get you in trouble.</p>
+<p>How?</p>
+<p>Well, never have I ever used Sheldon's toothbrush to clean the sink.</p>
+<p>Fine, is that how you want to play this?</p>
+<p>All right, never have I ever come up with a nickname for my own genitals.</p>
+<p>Never should've told you about Alvin and the Chipmunks.</p>
+<p><strong>Amy</strong>: Okay.</p>
+<p>My turn.</p>
+<p>Um...</p>
+<p>Never have I ever completely rocked my girlfriend's world in bed.</p>
+<p>(stammers) Amy...</p>
+<p>You know the rules.</p>
+<p>Drink.</p>
+<p>(clears throat)</p>
+<p>Yeah, go ahead.</p>
+<p>That's right.</p>
+<p>All right, my turn.</p>
+<p>Mm...</p>
+<p>Oh, I know.</p>
+<p>Never have I ever kept a secret bank account, because I think my wife can't handle money.</p>
+<p>Did I win?</p>
+<p>I feel like I won.</p>
+<p>I can't believe this.</p>
+<p>You realize I make more money than you?</p>
+<p>I don't, I know, but this isn't a big deal.</p>
+<p>It's just a little savings I put aside.</p>
+<p>We're married.</p>
+<p>We're supposed to share everything.</p>
+<p>What-- you mean, like, your massive credit card debt?</p>
+<p>(door slams)</p>
+<p>I'm calling it.</p>
+<p>I won.</p>
+<p>I appreciate the apology, but it's really not necessary.</p>
+<p>I overstepped my bounds.</p>
+<p>No, Raj, you've been great.</p>
+<p>I just, I need to start doing my part around here.</p>
+<p><strong>Bernadette</strong>: I hear that.</p>
+<p>Well, if that's the case, is there anything I can do to help?</p>
+<p>Well, not right now.</p>
+<p>But we could try out that microphone you got us, and listen to the baby's heartbeat.</p>
+<p>Really?</p>
+<p>It's okay if I listen with you?!</p>
+<p>Of course.</p>
+<p>Can I squirt the ultrasound jelly on your stomach?</p>
+<p>Hey, look at that.</p>
+<p>It's weird again.</p>
+<p>(door opens)</p>
+<p>Okay, you have every right to be mad.</p>
+<p>And what you said is true.</p>
+<p>You do make more money than me.</p>
+<p>So I had no right to do what I did.</p>
+<p>And I'm so sorry.</p>
+<p>I hope you can forgive me.</p>
+<p>How long have you had this secret account?</p>
+<p>A couple years, but I just put a few bucks aside every month for emergencies.</p>
+<p>Well, how much you got in there?</p>
+<p>$6,427.</p>
+<p>$47 once my nana's birthday check gets here.</p>
+<p>My God, Leonard, do you know what I could do with that kind of money?</p>
+<p>No, I do, and that's why I hid it.</p>
+<p>What good is it if you don't use it?</p>
+<p>Uh, uh, you have shoes you love, but never wear.</p>
+<p>I have money I love, but never spend.</p>
+<p>We're kind of a cute couple that way.</p>
+<p>Again, I'm sorry.</p>
+<p>I shouldn't have kept it a secret.</p>
+<p>Well, I have a secret I've been keeping from you, too.</p>
+<p>Is it a secret bank account?</p>
+<p>Because that would be awesome.</p>
+<p>I hate my job.</p>
+<p>Really?</p>
+<p>Why?</p>
+<p>Because I don't feel good flirting with doctors for sales.</p>
+<p>I mean, I know I make a lot of money.</p>
+<p>But I haven't been happy for a while.</p>
+<p>Why didn't you tell me?</p>
+<p>Because I know how important it is to you that I'm having some success.</p>
+<p>That's not true.</p>
+<p>Okay, really? So you'd be fine if I went back to acting and waiting tables again?</p>
+<p>If that's what you want to do, yes.</p>
+<p>Well, it's not what I want to do.</p>
+<p>Oh, yes.</p>
+<p>Doesn't matter what I want.</p>
+<p>Look, this job is gonna get me out of debt.</p>
+<p>So I'm gonna do the grown-up thing and see it through.</p>
+<p>Well, that is the grown-up thing.</p>
+<p>I guess.</p>
+<p>I love you.</p>
+<p>I love you, too.</p>
+<p>You know, never have I ever made love in the forest while it was raining.</p>
+<p>Well, guess I gotta drink.</p>
+<p>All right, here we go.</p>
+<p>(microphone droning)</p>
+<p>I'm not hearing anything.</p>
+<p>Well, give me a second.</p>
+<p>Are you sure you can do this?</p>
+<p>Hey, who found four dollars and change on the beach with his metal detector?</p>
+<p>I buried it there, so we could go home.</p>
+<p>(heartbeat echoing, gasps)</p>
+<p>Wait, that's it.</p>
+<p>Wow.</p>
+<p>Isn't that the best?</p>
+<p>You guys made a person.</p>
+<p>We did.</p>
+<p>And I like to think I helped.</p>
+<p>(whispering): You didn't.</p>
+<p><strong>Sheldon</strong>: Oh, let me see.</p>
+<p>Oh, um, never have I ever drunk milk past its expiration date.</p>
+<p>Never have I ever cancelled a dentist appointment.</p>
+<p>Oh, uh, never have I ever put my foot in the ocean.</p>
+<p>Never have I ever honked if I liked anything.</p>
+<p>Oh!</p>
+<p>Uh... never have I ever thrown, caught or touched a Frisbee.</p>
+<p>Never have I ever put salt on my food without trying it first.</p>
+<p>Yeah...</p>
+<p>Oh!</p>
+<p>Never have I ever pushed all the buttons in an elevator.</p>
+<p>(gasps)</p>
+<p>Well, we all have a past.</p>
 */});
 var lines = subtitles.split("\n");
 var box = document.createElement('div');
