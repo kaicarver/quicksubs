@@ -2,46 +2,71 @@
 Insert into any page using bookmarklet like this:
 javascript:(function(s){s.src='http://127.0.0.1:8887/cygwin64/home/kai/github/quicksubs/subs.js?'+Math.random();document.body.appendChild(s)})(document.createElement('script'))
 */
-var subtitles = prompt("Subtitles (get from view source of URL for episode)", "http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200");
-if (!subtitles) {
-  subtitles = getSubtitles();
-}
-var adhocFormat = 0; // ad hoc format: instead of SubRip .srt format, Big Bang Theory scripts, one subtitle per line, surrounded by p tags
-var subsep = "\n\n";
-if (adhocFormat) {
-  subsep = "\n";
-}
-var lines = subtitles.split(subsep);
-var box = document.createElement('div');
-box.id="box";
-box.style.position = 'fixed';
-box.style.left = 0;
-box.style.right = 0;
-box.style.marginLeft = 'auto';
-box.style.marginRight = 'auto';
-box.style.backgroundColor = 'rgba(253,245,230,0.7)';
-box.style.color = 'black';
-box.style.fontSize = '1.5em';
-box.style.fontFamily = 'Arial';
-box.style.textAlign = 'center';
-box.style.bottom = 0;
-box.style.zIndex = 150;
+var subtitles;
+//var subtitles = prompt("Subtitles (get from view source of URL for episode)", "http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200");
+var dialog = document.createElement('dialog');
+var adhoc;
 var curLine = 0;
-document.body.appendChild(box);
-nextLine(0);
-document.onkeydown = function() {
-  //console.log(window.event.keyCode);
-  switch (window.event.keyCode) {
-  case 37: nextLine(-1); return false;; // ← Left key
-  case 38: nextLine(-1); return false;; // ↑ Up key
-  case 13: nextLine(0);  return false;; // ↵ Enter key
-  case 39: nextLine(1);  return false;; // → Right key
-  case 40: nextLine(1);  return false;; // ↓ Down key
+var lines = [];
+var box;
+dialog.innerHTML = 'Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a> or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br><textarea id="text"></textarea><br><button id="ok">OK</button><button id="cancel">Cancel</button>';
+document.body.appendChild(dialog);
+document.querySelector('#ok').onclick = function() {
+  document.querySelector('dialog').close(document.querySelector('#text').value);
+};
+document.querySelector('#cancel').onclick = function() {
+  document.querySelector('dialog').close();
+};
+dialog.addEventListener('close', function() {
+  subtitles = this.returnValue;
+  if (subtitles == '') {
+    subtitles = getSubtitles();
   }
-  return true;
+  showSubtitles(subtitles);
+});
+dialog.showModal();
+
+function showSubtitles(subtitles) {
+  // ad hoc format: instead of SubRip .srt format, Big Bang Theory scripts, one subtitle per line, surrounded by p tags
+  // for now anything that starts with 0 is SubRip format
+  adhoc = !/^\s*\d+\s+\d\d:\d\d:\d\d,\d\d\d\s+/.test(subtitles);
+  var subsep = "\n\n";
+  if (adhoc) {
+    subsep = "\n";
+  }
+  lines = subtitles.split(subsep);
+  box = document.createElement('div');
+  box.id="box";
+  box.style.position = 'fixed';
+  box.style.left = 0;
+  box.style.right = 0;
+  box.style.marginLeft = 'auto';
+  box.style.marginRight = 'auto';
+  box.style.backgroundColor = 'rgba(253,245,230,0.7)';
+  box.style.color = 'black';
+  box.style.fontSize = '1.5em';
+  box.style.fontFamily = 'Arial';
+  box.style.textAlign = 'center';
+  box.style.bottom = 0;
+  box.style.zIndex = 150;
+  document.body.appendChild(box);
+  nextLine(0);
+  document.onkeydown = function() {
+    switch (window.event.keyCode) {
+    case 37: nextLine(-1); return false;; // ← Left key
+    case 38: nextLine(-1); return false;; // ↑ Up key
+    case 13: nextLine(0);  return false;; // ↵ Enter key
+    case 39: nextLine(1);  return false;; // → Right key
+    case 40: nextLine(1);  return false;; // ↓ Down key
+    }
+    return true;
+  }
 }
-function nextLine(pos, adhoc) {
+function nextLine(pos) {
   var box = document.getElementById("box");
+  if (curLine + pos < 0 || curLine + pos >= lines.length) {
+    return;
+  }
   curLine += pos;
   var line = lines[curLine];
   if (adhoc) {
