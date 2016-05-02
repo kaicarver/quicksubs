@@ -69,17 +69,19 @@ function nextLine(pos) {
   }
   curLine += pos;
   var line = lines[curLine];
+  var title;
+  var text;
   if (adhoc) {
-    line = lines[curLine].replace(/<.*?>/g, '');
+    text = lines[curLine].replace(/<.*?>/g, '');
+    title = (curLine + 1) + ' / ' + lines.length;
   } else {
     var regexp = /^\s*(\d+)\s+(\d+:\d+:\d+,\d+).*?(\d+:\d+:\d+,\d+)\s+([\s\S]+)/;
     var match = regexp.exec(line);
-    var title = (curLine + 1) + ' / ' + lines.length + "\n" + match[2] + ' - ' + match[3];
-    var text = match[4];
+    title = (curLine + 1) + ' / ' + lines.length + "\n" + match[2] + ' - ' + match[3];
+    text = match[4];
     text = text.replace(/\n/g, '<br>');
-    line = '<span title="' + title + '">' + text + '</span>';
   }
-  box.innerHTML = line;
+  box.innerHTML = '<span title="' + title + '">' + text + '</span>';;
 }
 
 function multiline(f) {
