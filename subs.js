@@ -7,6 +7,8 @@ javascript:(function(s){s.src='http://127.0.0.1:8887/cygwin64/home/kai/github/qu
 var adhoc;
 var curLine = 0;
 var lines = [];
+// use the path of the script we are executing to find other files to read (but can run into Access Origin problem)
+var path = document.currentScript.src.replace(/\/[^\/]+$/, '/');
 
 function showDialog() {
   var dialog = document.createElement('dialog');
@@ -108,7 +110,8 @@ function multiline(f) {
 // can use ad hoc text from view source of http://transcripts.foreverdreaming.org/viewtopic.php?f=159&t=22987
 function getSubtitles() {
   var req = new XMLHttpRequest();
-  req.open('GET', 'sevensamurai.srt', false);
+  // should use other method, synchronous request is deprecated
+  req.open('GET', path + 'sevensamurai.srt', false);
   req.send(null);
   return req.responseText;
 }
