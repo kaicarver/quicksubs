@@ -53,31 +53,42 @@ function showSubtitles(subtitles) {
   nextLine(0);
   document.onkeydown = function() {
     switch (window.event.keyCode) {
-    case 37: nextLine(-1); return false;; // ← Left key
-    case 38: nextLine(-1); return false;; // ↑ Up key
-    case 13: nextLine(0);  return false;; // ↵ Enter key
-    case 39: nextLine(1);  return false;; // → Right key
-    case 40: nextLine(1);  return false;; // ↓ Down key
+    case 37: nextLine(-1);  return false; // ← Left
+    case 38: nextLine(-1);  return false; // ↑ Up
+    case 39: nextLine(1);   return false; // → Right
+    case 40: nextLine(1);   return false; // ↓ Down
+    case 33: nextLine(-10); return false; //   PgUp
+    case 34: nextLine(10);  return false; //   PgDn
+    case 35: nextLine(lines.length - 1, true); return false; // End
+    case 36: nextLine(0, true);                return false; // Home
     }
     return true;
   }
 }
-function nextLine(pos) {
+function nextLine(pos, absolute) {
   var box = document.getElementById("box");
-  if (curLine + pos < 0 || curLine + pos >= lines.length) {
-    return;
+  if (absolute) {
+    if (pos >= 0 && pos < lines.length) {
+      curLine = pos;
+    }
+  } else {
+    if (curLine + pos < 0) {
+      curLine = 0;
+    } else if (curLine + pos >= lines.length) {
+      curLine = lines.length - 1;
+    } else {
+      curLine += pos;
+    }
   }
-  curLine += pos;
   var line = lines[curLine];
-  var title;
+  var title = (curLine + 1) + ' / ' + lines.length;
   var text;
   if (adhoc) {
-    text = lines[curLine].replace(/<.*?>/g, '');
-    title = (curLine + 1) + ' / ' + lines.length;
+    text = line.replace(/<.*?>/g, '');
   } else {
     var regexp = /^\s*(\d+)\s+(\d+:\d+:\d+,\d+).*?(\d+:\d+:\d+,\d+)\s+([\s\S]+)/;
     var match = regexp.exec(line);
-    title = (curLine + 1) + ' / ' + lines.length + "\n" + match[2] + ' - ' + match[3];
+    title = title + "\n" + match[2] + ' - ' + match[3];
     text = match[4];
     text = text.replace(/\n/g, '<br>');
   }
