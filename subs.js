@@ -2,12 +2,11 @@
 Insert into any page using bookmarklet like this:
 javascript:(function(s){s.src='http://127.0.0.1:8887/cygwin64/home/kai/github/quicksubs/subs.js?'+Math.random();document.body.appendChild(s)})(document.createElement('script'))
 */
-
+(function () {
+"use strict";
 var adhoc;
 var curLine = 0;
 var lines = [];
-
-showDialog();
 
 function showDialog() {
   var dialog = document.createElement('dialog');
@@ -22,13 +21,15 @@ function showDialog() {
   };
   dialog.addEventListener('close', function() {
     var subtitles = this.returnValue;
-    if (subtitles == '') {
+    if (subtitles === '') {
       subtitles = getSubtitles();
     }
     showSubtitles(subtitles);
   });
   dialog.showModal();
 }
+
+showDialog();
 
 function showSubtitles(subtitles) {
   // ad hoc format: instead of SubRip .srt format, Big Bang Theory scripts, one subtitle per line, surrounded by p tags
@@ -55,8 +56,8 @@ function showSubtitles(subtitles) {
   box.style.zIndex = 150;
   document.body.appendChild(box);
   nextLine(0);
-  document.onkeydown = function() {
-    switch (window.event.keyCode) {
+  document.onkeydown = function(event) {
+    switch (event.keyCode) {
     case 37: nextLine(-1);  return false; // ← Left
     case 38: nextLine(-1);  return false; // ↑ Up
     case 39: nextLine(1);   return false; // → Right
@@ -67,7 +68,7 @@ function showSubtitles(subtitles) {
     case 36: nextLine(0, true);                return false; // Home
     }
     return true;
-  }
+  };
 }
 
 function nextLine(pos, absolute) {
@@ -97,7 +98,7 @@ function nextLine(pos, absolute) {
     text = match[4];
     text = text.replace(/\n/g, '<br>');
   }
-  box.innerHTML = '<span title="' + title + '">' + text + '</span>';;
+  box.innerHTML = '<span title="' + title + '">' + text + '</span>';
 }
 
 function multiline(f) {
@@ -5960,3 +5961,4 @@ Downloaded From www.AllSubs.org
 
 */});
 }
+})();
