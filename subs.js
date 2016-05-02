@@ -2,29 +2,33 @@
 Insert into any page using bookmarklet like this:
 javascript:(function(s){s.src='http://127.0.0.1:8887/cygwin64/home/kai/github/quicksubs/subs.js?'+Math.random();document.body.appendChild(s)})(document.createElement('script'))
 */
-var subtitles;
-//var subtitles = prompt("Subtitles (get from view source of URL for episode)", "http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200");
-var dialog = document.createElement('dialog');
+
 var adhoc;
 var curLine = 0;
 var lines = [];
-var box;
-dialog.innerHTML = 'Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a> or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br><textarea id="text"></textarea><br><button id="ok">OK</button><button id="cancel">Cancel</button>';
-document.body.appendChild(dialog);
-document.querySelector('#ok').onclick = function() {
-  document.querySelector('dialog').close(document.querySelector('#text').value);
-};
-document.querySelector('#cancel').onclick = function() {
-  document.querySelector('dialog').close();
-};
-dialog.addEventListener('close', function() {
-  subtitles = this.returnValue;
-  if (subtitles == '') {
-    subtitles = getSubtitles();
-  }
-  showSubtitles(subtitles);
-});
-dialog.showModal();
+
+showDialog();
+
+function showDialog() {
+  var dialog = document.createElement('dialog');
+  dialog.style.textAlign = 'center';
+  dialog.innerHTML = 'Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a> or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br><textarea id="text" style="width: 100%" autofocus></textarea><br><button id="ok">OK</button><button id="cancel">Cancel</button>';
+  document.body.appendChild(dialog);
+  document.querySelector('#ok').onclick = function() {
+    document.querySelector('dialog').close(document.querySelector('#text').value);
+  };
+  document.querySelector('#cancel').onclick = function() {
+    document.querySelector('dialog').close();
+  };
+  dialog.addEventListener('close', function() {
+    var subtitles = this.returnValue;
+    if (subtitles == '') {
+      subtitles = getSubtitles();
+    }
+    showSubtitles(subtitles);
+  });
+  dialog.showModal();
+}
 
 function showSubtitles(subtitles) {
   // ad hoc format: instead of SubRip .srt format, Big Bang Theory scripts, one subtitle per line, surrounded by p tags
@@ -35,7 +39,7 @@ function showSubtitles(subtitles) {
     subsep = "\n";
   }
   lines = subtitles.split(subsep);
-  box = document.createElement('div');
+  var box = document.createElement('div');
   box.id="box";
   box.style.position = 'fixed';
   box.style.left = 0;
@@ -65,6 +69,7 @@ function showSubtitles(subtitles) {
     return true;
   }
 }
+
 function nextLine(pos, absolute) {
   var box = document.getElementById("box");
   if (absolute) {
