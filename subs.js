@@ -13,20 +13,16 @@ var dialogid = "subtitles_dialog";
 // use the path of the script we are executing to find other files to read (but can run into Access Origin problem)
 var path = document.currentScript.src.replace(/\/[^\/]+$/, '/');
 
-function getOrCreate(id, tagName) {
-  var e = document.getElementById(id);
-  if (e === null) {
-    e = document.createElement(tagName);
-    e.id = id;
-  }
-  document.body.appendChild(e);
-  return e;
-}
+showDialog();
+
 function showDialog() {
   var dialog = getOrCreate(dialogid, 'dialog');
   dialog.returnValue = '';
   dialog.style.textAlign = 'center';
-  dialog.innerHTML = 'Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a> or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br><textarea id="text" style="width: 100%" autofocus></textarea><br><button id="ok">OK</button><button id="cancel">Cancel</button>';
+  dialog.innerHTML = `Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a>
+or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br>
+<textarea id="text" style="width: 100%" autofocus></textarea><br>
+<button id="ok">OK</button><button id="cancel">Cancel</button>`;
   document.querySelector('#ok').onclick = function() {
     document.getElementById(dialogid).close(document.querySelector('#text').value);
   };
@@ -42,9 +38,6 @@ function showDialog() {
   });
   dialog.showModal();
 }
-
-showDialog();
-
 function showSubtitles(subtitles) {
   // ad hoc format: instead of SubRip .srt format, Big Bang Theory scripts, one subtitle per line, surrounded by p tags
   // for now anything that starts with 0 is SubRip format
@@ -82,7 +75,6 @@ function showSubtitles(subtitles) {
     return true;
   };
 }
-
 function nextLine(pos, absolute) {
   var box = document.getElementById(boxid);
   if (absolute) {
@@ -112,17 +104,23 @@ function nextLine(pos, absolute) {
   }
   box.innerHTML = '<span title="' + title + '">' + text + '</span>';
 }
-
-function multiline(f) {
-  return f.toString().split('\n').slice(1, -1).join('\n');
+function getOrCreate(id, tagName) {
+  var e = document.getElementById(id);
+  if (e === null) {
+    e = document.createElement(tagName);
+    e.id = id;
+  }
+  document.body.appendChild(e);
+  return e;
 }
-
-// can use ad hoc text from view source of http://transcripts.foreverdreaming.org/viewtopic.php?f=159&t=22987
 function getSubtitles() {
   var req = new XMLHttpRequest();
   // should use other method, synchronous request is deprecated
   req.open('GET', path + 'sevensamurai.srt', false);
   req.send(null);
   return req.responseText;
+}
+function multiline(f) {
+  return f.toString().split('\n').slice(1, -1).join('\n');
 }
 })();
