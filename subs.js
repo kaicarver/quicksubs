@@ -7,19 +7,31 @@ javascript:(function(s){s.src='http://127.0.0.1:8887/cygwin64/home/kai/github/qu
 var adhoc;
 var curLine = 0;
 var lines = [];
+var boxid = "subtitles_box";
+var dialogid = "subtitles_dialog";
+  
 // use the path of the script we are executing to find other files to read (but can run into Access Origin problem)
 var path = document.currentScript.src.replace(/\/[^\/]+$/, '/');
 
+function getOrCreate(id, tagName) {
+  var e = document.getElementById(id);
+  if (e === null) {
+    e = document.createElement(tagName);
+    e.id = id;
+  }
+  document.body.appendChild(e);
+  return e;
+}
 function showDialog() {
-  var dialog = document.createElement('dialog');
+  var dialog = getOrCreate(dialogid, 'dialog');
+  dialog.returnValue = '';
   dialog.style.textAlign = 'center';
   dialog.innerHTML = 'Subtitles in <a href="https://matroska.org/technical/specs/subtitles/srt.html" target="_blank">SubRip format</a> or <a href="http://transcripts.foreverdreaming.org/viewforum.php?f=159&start=200" target="_blank">lines</a>:<br><textarea id="text" style="width: 100%" autofocus></textarea><br><button id="ok">OK</button><button id="cancel">Cancel</button>';
-  document.body.appendChild(dialog);
   document.querySelector('#ok').onclick = function() {
-    document.querySelector('dialog').close(document.querySelector('#text').value);
+    document.getElementById(dialogid).close(document.querySelector('#text').value);
   };
   document.querySelector('#cancel').onclick = function() {
-    document.querySelector('dialog').close();
+    document.getElementById(dialogid).close();
   };
   dialog.addEventListener('close', function() {
     var subtitles = this.returnValue;
@@ -42,8 +54,7 @@ function showSubtitles(subtitles) {
     subsep = "\n";
   }
   lines = subtitles.split(subsep);
-  var box = document.createElement('div');
-  box.id="box";
+  var box = getOrCreate(boxid, 'div');
   box.style.position = 'fixed';
   box.style.left = 0;
   box.style.right = 0;
@@ -56,7 +67,6 @@ function showSubtitles(subtitles) {
   box.style.textAlign = 'center';
   box.style.bottom = 0;
   box.style.zIndex = 150;
-  document.body.appendChild(box);
   nextLine(0);
   document.onkeydown = function(event) {
     switch (event.keyCode) {
@@ -74,7 +84,7 @@ function showSubtitles(subtitles) {
 }
 
 function nextLine(pos, absolute) {
-  var box = document.getElementById("box");
+  var box = document.getElementById(boxid);
   if (absolute) {
     if (pos >= 0 && pos < lines.length) {
       curLine = pos;
